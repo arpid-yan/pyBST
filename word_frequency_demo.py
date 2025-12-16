@@ -3,12 +3,7 @@ import re
 from bst import BST
 
 def tokenize(text: str) -> list[str]:
-    """
-    Convert text to a list of words (lowercased).
 
-    Words are matched as sequences of alphanumeric characters and underscores,
-    plus apostrophes (e.g. "don't").
-    """
     return re.findall(r"[A-Za-z0-9_']+", text.lower())
 
 
@@ -31,9 +26,7 @@ def build_frequency_bst(words: list[str]) -> BST:
 
 
 def print_frequencies(tree: BST) -> None:
-    """
-    Print word frequencies in alphabetical order using inorder traversal.
-    """
+
 
     if tree.root is None:
         print("No words to display (tree is empty).")
@@ -58,4 +51,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+
     main()
